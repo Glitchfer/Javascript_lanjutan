@@ -24,9 +24,8 @@ function arrayBanding(nilaiAwal, nilaiAkhir, dataArray){
 
 	if(dataArray.length <= 5){
 		return console.log('Data array kurang WOiii!');
-	} else {
-		if (nilaiAkhir <= nilaiAwal){
-			return console.log("Yeeehhh, nilai akhir kekecilan!");
+	} else if(nilaiAkhir <= nilaiAwal){
+		return console.log("Yeeehhh, nilai akhir kekecilan!");
 		} else {
 			
 			const filt = dataArray.filter(function(x){
@@ -35,16 +34,46 @@ function arrayBanding(nilaiAwal, nilaiAkhir, dataArray){
 			const urutKan = filt.sort(function(a,b){
 				return a-b;
 			});
-			console.log("Output:\n" + urutKan); 
+			console.log(urutKan); 
+		}
+	}
+arrayBanding(5, 20, [6, 25, 4, 14, 17, 30, 8]);
+
+
+
+console.log('\n');
+//Hiraukan yang ada dibawah ini...!!!
+/*
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+console.log('Tugas No.3')
+
+
+function arrayBanding(nilaiAwal, nilaiAkhir, dataArray){
+
+	if(dataArray.length <= 5){
+		return alert('Data array kurang WOiii!');
+	} else {
+		if (nilaiAkhir <= nilaiAwal){
+			return alert("Yeeehhh, nilai akhir kekecilan!");
+		} else {
+			
+			const filt = dataArray.filter(function(x){
+				return x > nilaiAwal && x < nilaiAkhir;
+			});
+			const urutKan = filt.sort(function(a,b){
+				return a-b;
+			});
+			alert("Output:\n" + urutKan); 
 		}
 	}
 
 }
-arrayBanding(5, 20, [2, 25, 4, 14, 17, 30, 8]);
+arrayBanding(5, 20, [6, 25, 4, 14, 17, 30, 8]);
 
 
 
-
+*/
 
 
 

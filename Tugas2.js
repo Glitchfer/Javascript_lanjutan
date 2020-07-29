@@ -30,7 +30,7 @@ function cekName(name, lim, callback){
 			const filt = words.filter(function(x){
 			return x.includes(name);
 		}); 
-			const batas = filt.slice(lim);
+			const batas = filt.slice(0,lim);
 			
 			
 
@@ -80,7 +80,7 @@ function hasil(z){
 	console.log(z);
 }
 
-saringNama('n', 1, hasil);
+saringNama('n', 4, hasil);
 
 
 
@@ -92,8 +92,41 @@ console.log('\n');
 //Hiraukan yang ada dibawah ini...!!!
 
 
+/*
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+console.log('\n');
+console.log('Version 3');
 
+function saringNama(filtAwal, filtAkhir, callback){
+		const listNama = [
+					'Abigail', 'Alexandra', 'Alison',
+					'Amanda', 'Angela', 'Bella',
+					'Carol', 'Caroline', 'Carolyn',
+					'Deirdre', 'Diana', 'Elizabeth',
+					'Ella', 'Faith', 'Olivia', 'Penelope'
+					];
+		const saring = listNama.filter(function(a){
+					return a.includes(filtAwal);
+					}); 
 
+		//var panjang = saring.length;	
+		//var jumIndex = panjang - 1;
+		var indexList = [];
+
+		for (nilaiAwal = 0; nilaiAwal <= filtAkhir-1; nilaiAwal++) {
+	
+				indexList[nilaiAwal] = saring[nilaiAwal];
+		}
+	
+	callback(indexList);
+}
+
+function hasil(z){
+	alert("nih hasilnya: \n"+z);
+}
+
+saringNama(prompt('mau difilter pake huruf apa ?'), Number(prompt("berapa banyak data yang mau ditampilkan ?")), hasil);
 
 
 
@@ -102,7 +135,7 @@ console.log('\n');
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/*
+
 console.log('\n');
 console.log('version tanpa function');
 
